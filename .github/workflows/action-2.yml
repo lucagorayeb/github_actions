@@ -1,0 +1,14 @@
+name: Second action of this repo
+
+on: 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+
+jobs:
+  action_two:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Md files alterations will not be commited."
