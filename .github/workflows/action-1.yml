@@ -1,0 +1,13 @@
+name: Firts action of github
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  action_one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First action
+      - run: echo "First action of this repo."
