@@ -13,6 +13,6 @@ jobs:
   secrets_variables:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $API_TOKEN
+      - run: echo ${{ secrets.API_TOKEN }}
       - run: echo $APP_GLOBAL
       - run: echo ${{ vars.ENVIRONMENT_NAME }}
