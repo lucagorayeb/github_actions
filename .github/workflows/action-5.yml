@@ -15,4 +15,4 @@ jobs:
     steps:
       - run: echo $API_TOKEN
       - run: echo $APP_GLOBAL
-      - run: echo {{ $ENVIRONMENT_NAME }}
+      - run: echo ${{ vars.ENVIRONMENT_NAME }}
