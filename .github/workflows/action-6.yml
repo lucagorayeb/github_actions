@@ -1,0 +1,25 @@
+name: Sixth action of this repo
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uploading files to dist directory
+        uses: actions/upload-artifact@v4
+        with:
+          path: |
+            dist/app.txt
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coping files from dist directory
+        uses: actions/download-artifact@v5
+        with:
+          path: |
+            app.txt
