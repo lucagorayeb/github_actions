@@ -20,11 +20,12 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Coping files from dist directory
         uses: actions/download-artifact@v5
         with:
-          name: teste.txt
+          name: teste
 
       - shell: bash
         run: |
