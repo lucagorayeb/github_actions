@@ -29,4 +29,4 @@ jobs:
       - shell: bash
         run: |
           value=`cat teste.txt`
-          echo The result is $value
+          echo "The result is $value"
