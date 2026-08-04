@@ -9,11 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - shell: bash
+        run: |
+          echo "testando" >> teste.txt
       - name: Uploading files to dist directory
         uses: actions/upload-artifact@v4
         with:
-          name: app
-          path: dist/app.txt
+          name: teste
+          path: teste.txt
 
   deploy:
     runs-on: ubuntu-latest
@@ -21,9 +24,9 @@ jobs:
       - name: Coping files from dist directory
         uses: actions/download-artifact@v5
         with:
-          name: app
+          name: teste
 
       - shell: bash
         run: |
-          value=`cat dist/app.txt`
+          value=`cat teste.txt`
           echo The result is $value
