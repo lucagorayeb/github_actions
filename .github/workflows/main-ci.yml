@@ -8,5 +8,3 @@ on:
 jobs:
   call_reusable_linter:
     uses: $/.github/workflows/reusable-linter.yml
-    with:
-      config-path: .github/labeler.yml
