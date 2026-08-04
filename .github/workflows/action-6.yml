@@ -13,7 +13,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app
-          path: ../dist/app.txt
+          path: dist/app.txt
 
   deploy:
     runs-on: ubuntu-latest
@@ -25,5 +25,5 @@ jobs:
 
       - shell: bash
         run: |
-          value=`cat ../dist/app.txt`
+          value=`cat dist/app.txt`
           echo The result is $value
