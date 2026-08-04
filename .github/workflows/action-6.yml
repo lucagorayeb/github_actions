@@ -24,7 +24,7 @@ jobs:
       - name: Coping files from dist directory
         uses: actions/download-artifact@v5
         with:
-          name: teste
+          name: teste.txt
 
       - shell: bash
         run: |
